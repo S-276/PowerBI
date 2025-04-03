@@ -34,6 +34,7 @@ services:
       - D:\Documents\UK\University\BI\Repo\airflow-etl\dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data:/opt/airflow/data
+      - D:\Documents\UK\University\BI\Repo\airflow-etl\data\ISSLogs:/opt/airflow/data/ISS Logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StagingArea:/opt/airflow/data/StagingArea
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StarSchema:/opt/airflow/data/StarSchema
     ports:  # Change host port to 8081
@@ -56,6 +57,7 @@ services:
       - D:\Documents\UK\University\BI\Repo\airflow-etl\dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data:/opt/airflow/data
+      - D:\Documents\UK\University\BI\Repo\airflow-etl\data\ISSLogs:/opt/airflow/data/ISS Logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StagingArea:/opt/airflow/data/StagingArea
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StarSchema:/opt/airflow/data/StarSchema
     depends_on:
@@ -73,6 +75,7 @@ services:
       - D:\Documents\UK\University\BI\Repo\airflow-etl\dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data:/opt/airflow/data
+      - D:\Documents\UK\University\BI\Repo\airflow-etl\data\ISSLogs:/opt/airflow/data/ISS Logs
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StagingArea:/opt/airflow/data/StagingArea
       - D:\Documents\UK\University\BI\Repo\airflow-etl\data\StarSchema:/opt/airflow/data/StarSchema
     entrypoint: >
