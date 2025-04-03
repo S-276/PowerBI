@@ -1,0 +1,148 @@
+[2025-04-03T09:38:43.218+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T09:38:43.230+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T09:38:43.231+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T09:38:43.247+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 00:00:00+00:00
+[2025-04-03T09:38:43.252+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2025-04-03T09:38:43.256+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp70ouo_uj']
+[2025-04-03T09:38:43.259+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-03T09:38:43.312+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [running]> on host 72a8ea729061
+[2025-04-03T09:38:43.574+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T09:38:43.585+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 111, in process_logs
+    raise AirflowException("No valid log entries found in the log files.")
+airflow.exceptions.AirflowException: No valid log entries found in the log files.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 151, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: No valid log entries found in the log files.
+[2025-04-03T09:38:43.594+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T000000, start_date=20250403T093843, end_date=20250403T093843
+[2025-04-03T09:38:43.606+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: No valid log entries found in the log files.; 203)
+[2025-04-03T09:38:43.630+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-03T09:38:43.657+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T10:02:30.285+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:02:30.296+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:02:30.297+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T10:02:30.313+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 00:00:00+00:00
+[2025-04-03T10:02:30.319+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2025-04-03T10:02:30.325+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpj1fc5b89']
+[2025-04-03T10:02:30.328+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-03T10:02:30.390+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [running]> on host f620fbfc076b
+[2025-04-03T10:02:30.697+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T10:02:30.701+0000] {logging_mixin.py:188} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T10:02:30.703+0000] {logging_mixin.py:188} INFO - Files found: []
+[2025-04-03T10:02:30.714+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 117, in process_logs
+    raise AirflowException("No valid log entries found in the log files.")
+airflow.exceptions.AirflowException: No valid log entries found in the log files.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 157, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: No valid log entries found in the log files.
+[2025-04-03T10:02:30.725+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T000000, start_date=20250403T100230, end_date=20250403T100230
+[2025-04-03T10:02:30.739+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: No valid log entries found in the log files.; 203)
+[2025-04-03T10:02:30.779+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-03T10:02:30.808+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T10:07:46.977+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:07:46.991+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:07:46.992+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T10:07:47.013+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 00:00:00+00:00
+[2025-04-03T10:07:47.030+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2025-04-03T10:07:47.047+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp10m46ct5']
+[2025-04-03T10:07:47.060+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-03T10:07:47.137+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [running]> on host bf44a9d0d837
+[2025-04-03T10:07:47.401+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T10:07:47.404+0000] {logging_mixin.py:188} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T10:07:47.406+0000] {logging_mixin.py:188} INFO - Files found: []
+[2025-04-03T10:07:47.415+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 117, in process_logs
+    raise AirflowException("No valid log entries found in the log files.")
+airflow.exceptions.AirflowException: No valid log entries found in the log files.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 157, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: No valid log entries found in the log files.
+[2025-04-03T10:07:47.430+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T000000, start_date=20250403T100746, end_date=20250403T100747
+[2025-04-03T10:07:47.452+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: No valid log entries found in the log files.; 203)
+[2025-04-03T10:07:47.500+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-03T10:07:47.540+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T10:24:34.313+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:24:34.325+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:24:34.326+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T10:24:34.343+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 00:00:00+00:00
+[2025-04-03T10:24:34.348+0000] {standard_task_runner.py:60} INFO - Started process 269 to run task
+[2025-04-03T10:24:34.354+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpw2let2en']
+[2025-04-03T10:24:34.357+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-03T10:24:34.428+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [running]> on host a086d075ccfe
+[2025-04-03T10:24:34.805+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T10:24:34.810+0000] {logging_mixin.py:188} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T10:24:34.811+0000] {logging_mixin.py:188} INFO - Files found: []
+[2025-04-03T10:24:34.821+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 117, in process_logs
+    raise AirflowException("No valid log entries found in the log files.")
+airflow.exceptions.AirflowException: No valid log entries found in the log files.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 157, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: No valid log entries found in the log files.
+[2025-04-03T10:24:34.831+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T000000, start_date=20250403T102434, end_date=20250403T102434
+[2025-04-03T10:24:34.846+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: No valid log entries found in the log files.; 269)
+[2025-04-03T10:24:34.889+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-03T10:24:34.913+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T10:31:47.603+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:31:47.614+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T10:31:47.615+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T10:31:47.632+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 00:00:00+00:00
+[2025-04-03T10:31:47.637+0000] {standard_task_runner.py:60} INFO - Started process 192 to run task
+[2025-04-03T10:31:47.642+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp1bi8trrp']
+[2025-04-03T10:31:47.646+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-03T10:31:47.750+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-02T00:00:00+00:00 [running]> on host c4002c286bfc
+[2025-04-03T10:31:48.083+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T10:31:48.087+0000] {logging_mixin.py:188} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T10:31:48.088+0000] {logging_mixin.py:188} INFO - Files found: []
+[2025-04-03T10:31:48.089+0000] {logging_mixin.py:188} INFO - No valid log entries found. Creating an empty DataFrame.
+[2025-04-03T10:31:48.104+0000] {logging_mixin.py:188} INFO - Combined logs saved to: d:/Documents/UK/University/BI/Repo/***-etl/data/StagingArea/CombinedLogs.csv
+[2025-04-03T10:31:48.105+0000] {logging_mixin.py:188} INFO - No valid data to process further. Skipping Star Schema and Insights generation.
+[2025-04-03T10:31:48.106+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-03T10:31:48.115+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T000000, start_date=20250403T103147, end_date=20250403T103148
+[2025-04-03T10:31:48.138+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-03T10:31:48.160+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

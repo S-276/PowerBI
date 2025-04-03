@@ -1,0 +1,37 @@
+[2025-04-02T20:06:05.087+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files manual__2025-04-02T19:40:23.982266+00:00 [queued]>
+[2025-04-02T20:06:05.107+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files manual__2025-04-02T19:40:23.982266+00:00 [queued]>
+[2025-04-02T20:06:05.133+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 4
+[2025-04-02T20:06:05.200+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-02 19:40:23.982266+00:00
+[2025-04-02T20:06:05.243+0000] {standard_task_runner.py:60} INFO - Started process 624 to run task
+[2025-04-02T20:06:05.247+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'manual__2025-04-02T19:40:23.982266+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp9jen5wy8']
+[2025-04-02T20:06:05.277+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask process_log_files
+[2025-04-02T20:06:05.483+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files manual__2025-04-02T19:40:23.982266+00:00 [running]> on host c8bdc85c7d51
+[2025-04-02T20:06:05.783+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T19:40:23.982266+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-02T19:40:23.982266+00:00'
+[2025-04-02T20:06:05.826+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 129, in process_logs
+    fact_table = df[["FullDate", "c-ip", "cs-method", "cs-uri-stem", "sc-status",
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3767, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5877, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5941, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['sc-bytes'] not in index"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 145, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: "['sc-bytes'] not in index"
+[2025-04-02T20:06:05.898+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250402T194023, start_date=20250402T200605, end_date=20250402T200605
+[2025-04-02T20:06:05.914+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task process_log_files (Log processing failed: "['sc-bytes'] not in index"; 624)
+[2025-04-02T20:06:05.948+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T20:06:06.031+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

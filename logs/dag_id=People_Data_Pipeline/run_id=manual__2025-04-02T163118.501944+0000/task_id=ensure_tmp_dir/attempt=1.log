@@ -1,0 +1,14 @@
+[2025-04-02T16:37:24.240+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_tmp_dir manual__2025-04-02T16:31:18.501944+00:00 [queued]>
+[2025-04-02T16:37:24.252+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_tmp_dir manual__2025-04-02T16:31:18.501944+00:00 [queued]>
+[2025-04-02T16:37:24.253+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2025-04-02T16:37:24.273+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ensure_tmp_dir> on 2025-04-02 16:31:18.501944+00:00
+[2025-04-02T16:37:24.278+0000] {standard_task_runner.py:60} INFO - Started process 368 to run task
+[2025-04-02T16:37:24.282+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'People_Data_Pipeline', 'ensure_tmp_dir', 'manual__2025-04-02T16:31:18.501944+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/people_dag.py', '--cfg-path', '/tmp/tmphj6vvzhs']
+[2025-04-02T16:37:24.286+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask ensure_tmp_dir
+[2025-04-02T16:37:24.346+0000] {task_command.py:423} INFO - Running <TaskInstance: People_Data_Pipeline.ensure_tmp_dir manual__2025-04-02T16:31:18.501944+00:00 [running]> on host e3653afa66c4
+[2025-04-02T16:37:24.437+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='People_Data_Pipeline' AIRFLOW_CTX_TASK_ID='ensure_tmp_dir' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T16:31:18.501944+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-02T16:31:18.501944+00:00'
+[2025-04-02T16:37:24.439+0000] {people_dag.py:114} INFO - Temporary directory already exists: /tmp
+[2025-04-02T16:37:24.440+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T16:37:24.449+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=People_Data_Pipeline, task_id=ensure_tmp_dir, execution_date=20250402T163118, start_date=20250402T163724, end_date=20250402T163724
+[2025-04-02T16:37:24.496+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T16:37:24.528+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

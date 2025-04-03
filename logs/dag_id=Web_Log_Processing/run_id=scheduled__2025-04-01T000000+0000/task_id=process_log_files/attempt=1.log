@@ -1,0 +1,146 @@
+[2025-04-02T14:50:16.179+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T14:50:16.190+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T14:50:16.191+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T14:50:16.214+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T14:50:16.219+0000] {standard_task_runner.py:60} INFO - Started process 210 to run task
+[2025-04-02T14:50:16.224+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp3ago_v__']
+[2025-04-02T14:50:16.227+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-02T14:50:16.295+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host 8f241f30abb3
+[2025-04-02T14:50:16.395+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T14:50:16.426+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T14:50:16.442+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T145016, end_date=20250402T145016
+[2025-04-02T14:50:16.477+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T14:50:16.511+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T15:07:59.215+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:07:59.226+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:07:59.227+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T15:07:59.245+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:07:59.250+0000] {standard_task_runner.py:60} INFO - Started process 190 to run task
+[2025-04-02T15:07:59.254+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp2furbj0r']
+[2025-04-02T15:07:59.257+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask process_log_files
+[2025-04-02T15:07:59.318+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host adf46a4740ac
+[2025-04-02T15:07:59.427+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:07:59.450+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T15:07:59.462+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T150759, end_date=20250402T150759
+[2025-04-02T15:07:59.509+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T15:07:59.532+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T15:30:02.587+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:30:02.596+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:30:02.597+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T15:30:02.614+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:30:02.619+0000] {standard_task_runner.py:60} INFO - Started process 572 to run task
+[2025-04-02T15:30:02.622+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpy71tpty6']
+[2025-04-02T15:30:02.625+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask process_log_files
+[2025-04-02T15:30:02.680+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host decb7b281929
+[2025-04-02T15:30:02.772+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:30:02.819+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T15:30:02.832+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T153002, end_date=20250402T153002
+[2025-04-02T15:30:02.877+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T15:30:02.914+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T15:54:21.224+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:54:21.234+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:54:21.235+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T15:54:21.298+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:54:21.307+0000] {standard_task_runner.py:60} INFO - Started process 202 to run task
+[2025-04-02T15:54:21.314+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpqv49likq']
+[2025-04-02T15:54:21.319+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask process_log_files
+[2025-04-02T15:54:21.408+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host e8d989b91ca4
+[2025-04-02T15:54:21.546+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:54:21.574+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T15:54:21.585+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T155421, end_date=20250402T155421
+[2025-04-02T15:54:21.648+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T15:54:21.687+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:08:29.458+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:08:29.469+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:08:29.470+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T16:08:29.490+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:08:29.495+0000] {standard_task_runner.py:60} INFO - Started process 212 to run task
+[2025-04-02T16:08:29.499+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpsc6ienps']
+[2025-04-02T16:08:29.504+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask process_log_files
+[2025-04-02T16:08:29.574+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host 4c976e0a7b20
+[2025-04-02T16:08:29.668+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:08:29.719+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T16:08:29.739+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T160829, end_date=20250402T160829
+[2025-04-02T16:08:29.794+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T16:08:29.829+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:44:22.606+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:44:22.616+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:44:22.617+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T16:44:22.631+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:44:22.636+0000] {standard_task_runner.py:60} INFO - Started process 466 to run task
+[2025-04-02T16:44:22.639+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpj_g5uex7']
+[2025-04-02T16:44:22.641+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask process_log_files
+[2025-04-02T16:44:22.699+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host e3653afa66c4
+[2025-04-02T16:44:22.783+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:44:22.807+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-02T16:44:22.816+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T164422, end_date=20250402T164422
+[2025-04-02T16:44:22.853+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-02T16:44:22.880+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T19:40:09.905+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T19:40:09.919+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T19:40:09.920+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T19:40:09.940+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T19:40:09.947+0000] {standard_task_runner.py:60} INFO - Started process 192 to run task
+[2025-04-02T19:40:09.952+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp40kqoklv']
+[2025-04-02T19:40:09.956+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-02T19:40:10.046+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host c8bdc85c7d51
+[2025-04-02T19:40:10.339+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T19:40:10.384+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 129, in process_logs
+    fact_table = df[["FullDate", "c-ip", "cs-method", "cs-uri-stem", "sc-status",
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3767, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5877, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5941, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['sc-bytes'] not in index"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 145, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: "['sc-bytes'] not in index"
+[2025-04-02T19:40:10.397+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T194009, end_date=20250402T194010
+[2025-04-02T19:40:10.414+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: "['sc-bytes'] not in index"; 192)
+[2025-04-02T19:40:10.448+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T19:40:10.480+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T20:36:43.252+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T20:36:43.266+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T20:36:43.266+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-02T20:36:43.291+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): process_log_files> on 2025-04-01 00:00:00+00:00
+[2025-04-02T20:36:43.297+0000] {standard_task_runner.py:60} INFO - Started process 192 to run task
+[2025-04-02T20:36:43.302+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_log_files', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp6z1mvyv7']
+[2025-04-02T20:36:43.305+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_log_files
+[2025-04-02T20:36:43.369+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_log_files scheduled__2025-04-01T00:00:00+00:00 [running]> on host 4031425a0ee2
+[2025-04-02T20:36:43.669+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_log_files' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T20:36:43.682+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/w3c.py", line 111, in process_logs
+    df = pd.DataFrame(combined_data, columns=columns[:len(combined_data[0])])
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/w3c.py", line 151, in process_logs
+    raise AirflowException(f"Log processing failed: {str(e)}")
+airflow.exceptions.AirflowException: Log processing failed: list index out of range
+[2025-04-02T20:36:43.694+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_log_files, execution_date=20250401T000000, start_date=20250402T203643, end_date=20250402T203643
+[2025-04-02T20:36:43.714+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_log_files (Log processing failed: list index out of range; 192)
+[2025-04-02T20:36:43.757+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T20:36:43.781+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

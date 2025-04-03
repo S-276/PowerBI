@@ -1,0 +1,158 @@
+[2025-04-02T15:33:02.443+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:33:02.454+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:33:02.457+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-02T15:33:02.475+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ensure_people_table> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:33:02.480+0000] {standard_task_runner.py:60} INFO - Started process 637 to run task
+[2025-04-02T15:33:02.484+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'People_Data_Pipeline', 'ensure_people_table', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/people_dag.py', '--cfg-path', '/tmp/tmpruqumf_e']
+[2025-04-02T15:33:02.487+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask ensure_people_table
+[2025-04-02T15:33:02.550+0000] {task_command.py:423} INFO - Running <TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [running]> on host decb7b281929
+[2025-04-02T15:33:02.656+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='People_Data_Pipeline' AIRFLOW_CTX_TASK_ID='ensure_people_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:33:02.678+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people_dag.py", line 85, in ensure_people_table
+    postgres_hook.run(CREATE_PEOPLE_TABLE_SQL)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 128, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 479, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+[2025-04-02T15:33:02.689+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=People_Data_Pipeline, task_id=ensure_people_table, execution_date=20250401T000000, start_date=20250402T153302, end_date=20250402T153302
+[2025-04-02T15:33:02.707+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task ensure_people_table (The conn_id `postgres_default` isn't defined; 637)
+[2025-04-02T15:33:02.737+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T15:33:02.768+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T15:57:21.997+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:57:22.008+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:57:22.009+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-02T15:57:22.028+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ensure_people_table> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:57:22.034+0000] {standard_task_runner.py:60} INFO - Started process 262 to run task
+[2025-04-02T15:57:22.041+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'People_Data_Pipeline', 'ensure_people_table', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/people_dag.py', '--cfg-path', '/tmp/tmpryu61h9i']
+[2025-04-02T15:57:22.046+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask ensure_people_table
+[2025-04-02T15:57:22.157+0000] {task_command.py:423} INFO - Running <TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [running]> on host e8d989b91ca4
+[2025-04-02T15:57:22.298+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='People_Data_Pipeline' AIRFLOW_CTX_TASK_ID='ensure_people_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:57:22.301+0000] {people_dag.py:87} INFO - Attempting to connect to PostgreSQL...
+[2025-04-02T15:57:22.315+0000] {people_dag.py:91} ERROR - Failed to ensure people table: The conn_id `postgres_default` isn't defined
+[2025-04-02T15:57:22.325+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/people_dag.py", line 88, in ensure_people_table
+    postgres_hook.run(CREATE_PEOPLE_TABLE_SQL)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 128, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 479, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people_dag.py", line 92, in ensure_people_table
+    raise AirflowException(f"Failed to ensure people table: {str(e)}")
+airflow.exceptions.AirflowException: Failed to ensure people table: The conn_id `postgres_default` isn't defined
+[2025-04-02T15:57:22.342+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=People_Data_Pipeline, task_id=ensure_people_table, execution_date=20250401T000000, start_date=20250402T155721, end_date=20250402T155722
+[2025-04-02T15:57:22.363+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task ensure_people_table (Failed to ensure people table: The conn_id `postgres_default` isn't defined; 262)
+[2025-04-02T15:57:22.374+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T15:57:22.400+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:12:37.798+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:12:37.808+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:12:37.809+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-02T16:12:37.825+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ensure_people_table> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:12:37.830+0000] {standard_task_runner.py:60} INFO - Started process 304 to run task
+[2025-04-02T16:12:37.835+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'People_Data_Pipeline', 'ensure_people_table', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/people_dag.py', '--cfg-path', '/tmp/tmped14_sfg']
+[2025-04-02T16:12:37.839+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask ensure_people_table
+[2025-04-02T16:12:37.904+0000] {task_command.py:423} INFO - Running <TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [running]> on host 4c976e0a7b20
+[2025-04-02T16:12:38.012+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='People_Data_Pipeline' AIRFLOW_CTX_TASK_ID='ensure_people_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:12:38.014+0000] {people_dag.py:87} INFO - Attempting to connect to PostgreSQL...
+[2025-04-02T16:12:38.034+0000] {base.py:83} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-04-02T16:12:38.036+0000] {people_dag.py:91} ERROR - Failed to ensure people table: could not translate host name "localhost:8081" to address: Name or service not known
+
+[2025-04-02T16:12:38.048+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/people_dag.py", line 88, in ensure_people_table
+    postgres_hook.run(CREATE_PEOPLE_TABLE_SQL)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 158, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "localhost:8081" to address: Name or service not known
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people_dag.py", line 92, in ensure_people_table
+    raise AirflowException(f"Failed to ensure people table: {str(e)}")
+airflow.exceptions.AirflowException: Failed to ensure people table: could not translate host name "localhost:8081" to address: Name or service not known
+
+[2025-04-02T16:12:38.062+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=People_Data_Pipeline, task_id=ensure_people_table, execution_date=20250401T000000, start_date=20250402T161237, end_date=20250402T161238
+[2025-04-02T16:12:38.078+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task ensure_people_table (Failed to ensure people table: could not translate host name "localhost:8081" to address: Name or service not known
+; 304)
+[2025-04-02T16:12:38.088+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T16:12:38.120+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:34:18.884+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:34:18.893+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:34:18.894+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-02T16:34:18.910+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ensure_people_table> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:34:18.915+0000] {standard_task_runner.py:60} INFO - Started process 304 to run task
+[2025-04-02T16:34:18.920+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'People_Data_Pipeline', 'ensure_people_table', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/people_dag.py', '--cfg-path', '/tmp/tmp11mc17h4']
+[2025-04-02T16:34:18.923+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask ensure_people_table
+[2025-04-02T16:34:18.986+0000] {task_command.py:423} INFO - Running <TaskInstance: People_Data_Pipeline.ensure_people_table scheduled__2025-04-01T00:00:00+00:00 [running]> on host e3653afa66c4
+[2025-04-02T16:34:19.056+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='People_Data_Pipeline' AIRFLOW_CTX_TASK_ID='ensure_people_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:34:19.057+0000] {people_dag.py:81} INFO - Attempting to connect to PostgreSQL...
+[2025-04-02T16:34:19.064+0000] {people_dag.py:85} ERROR - Failed to ensure people table: The conn_id `postgres_default` isn't defined
+[2025-04-02T16:34:19.071+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/people_dag.py", line 82, in ensure_people_table
+    postgres_hook.run(CREATE_PEOPLE_TABLE_SQL)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 391, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 128, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 479, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_default` isn't defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/people_dag.py", line 86, in ensure_people_table
+    raise AirflowException(f"Failed to ensure people table: {str(e)}")
+airflow.exceptions.AirflowException: Failed to ensure people table: The conn_id `postgres_default` isn't defined
+[2025-04-02T16:34:19.079+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=People_Data_Pipeline, task_id=ensure_people_table, execution_date=20250401T000000, start_date=20250402T163418, end_date=20250402T163419
+[2025-04-02T16:34:19.090+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task ensure_people_table (Failed to ensure people table: The conn_id `postgres_default` isn't defined; 304)
+[2025-04-02T16:34:19.133+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T16:34:19.164+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

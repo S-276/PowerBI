@@ -1,0 +1,100 @@
+[2025-04-02T15:00:20.096+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:00:20.107+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:00:20.108+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-04-02T15:00:20.125+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): generate_analytics_report> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:00:20.130+0000] {standard_task_runner.py:60} INFO - Started process 418 to run task
+[2025-04-02T15:00:20.135+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'generate_analytics_report', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpuhxtlqju']
+[2025-04-02T15:00:20.138+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask generate_analytics_report
+[2025-04-02T15:00:20.200+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [running]> on host 8f241f30abb3
+[2025-04-02T15:00:20.287+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='generate_analytics_report' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:00:20.289+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-02T15:00:20.291+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/analytics.py']
+[2025-04-02T15:00:20.302+0000] {subprocess.py:86} INFO - Output:
+[2025-04-02T15:00:20.336+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/dags/analytics.py': [Errno 2] No such file or directory
+[2025-04-02T15:00:20.339+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-02T15:00:20.351+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-02T15:00:20.356+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=generate_analytics_report, execution_date=20250401T000000, start_date=20250402T150020, end_date=20250402T150020
+[2025-04-02T15:00:20.369+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task generate_analytics_report (Bash command failed. The command returned a non-zero exit code 2.; 418)
+[2025-04-02T15:00:20.388+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T15:00:20.407+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T15:45:59.312+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:45:59.331+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T15:45:59.333+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-04-02T15:45:59.358+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): generate_analytics_report> on 2025-04-01 00:00:00+00:00
+[2025-04-02T15:45:59.366+0000] {standard_task_runner.py:60} INFO - Started process 736 to run task
+[2025-04-02T15:45:59.371+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'generate_analytics_report', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmp5x37oly4']
+[2025-04-02T15:45:59.377+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask generate_analytics_report
+[2025-04-02T15:45:59.485+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [running]> on host decb7b281929
+[2025-04-02T15:45:59.621+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='generate_analytics_report' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T15:45:59.623+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-02T15:45:59.625+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/analytics.py']
+[2025-04-02T15:45:59.635+0000] {subprocess.py:86} INFO - Output:
+[2025-04-02T15:45:59.670+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/dags/analytics.py': [Errno 2] No such file or directory
+[2025-04-02T15:45:59.674+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-02T15:45:59.688+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-02T15:45:59.692+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=generate_analytics_report, execution_date=20250401T000000, start_date=20250402T154559, end_date=20250402T154559
+[2025-04-02T15:45:59.709+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task generate_analytics_report (Bash command failed. The command returned a non-zero exit code 2.; 736)
+[2025-04-02T15:45:59.744+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T15:45:59.764+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:04:25.372+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:04:25.386+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:04:25.387+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-04-02T16:04:25.405+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): generate_analytics_report> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:04:25.411+0000] {standard_task_runner.py:60} INFO - Started process 413 to run task
+[2025-04-02T16:04:25.415+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'generate_analytics_report', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpnju0djig']
+[2025-04-02T16:04:25.418+0000] {standard_task_runner.py:88} INFO - Job 10: Subtask generate_analytics_report
+[2025-04-02T16:04:25.489+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [running]> on host e8d989b91ca4
+[2025-04-02T16:04:25.585+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='generate_analytics_report' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:04:25.587+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-02T16:04:25.589+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/analytics.py']
+[2025-04-02T16:04:25.600+0000] {subprocess.py:86} INFO - Output:
+[2025-04-02T16:04:25.634+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/dags/analytics.py': [Errno 2] No such file or directory
+[2025-04-02T16:04:25.637+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-02T16:04:25.650+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-02T16:04:25.655+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=generate_analytics_report, execution_date=20250401T000000, start_date=20250402T160425, end_date=20250402T160425
+[2025-04-02T16:04:25.673+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 10 for task generate_analytics_report (Bash command failed. The command returned a non-zero exit code 2.; 413)
+[2025-04-02T16:04:25.710+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T16:04:25.741+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:54:25.878+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:54:25.892+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [queued]>
+[2025-04-02T16:54:25.893+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-04-02T16:54:25.911+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): generate_analytics_report> on 2025-04-01 00:00:00+00:00
+[2025-04-02T16:54:25.917+0000] {standard_task_runner.py:60} INFO - Started process 684 to run task
+[2025-04-02T16:54:25.920+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'generate_analytics_report', 'scheduled__2025-04-01T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpw2_tzuk2']
+[2025-04-02T16:54:25.923+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask generate_analytics_report
+[2025-04-02T16:54:25.985+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.generate_analytics_report scheduled__2025-04-01T00:00:00+00:00 [running]> on host e3653afa66c4
+[2025-04-02T16:54:26.066+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='generate_analytics_report' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-01T00:00:00+00:00'
+[2025-04-02T16:54:26.068+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-02T16:54:26.071+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/analytics.py']
+[2025-04-02T16:54:26.080+0000] {subprocess.py:86} INFO - Output:
+[2025-04-02T16:54:26.112+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/dags/analytics.py': [Errno 2] No such file or directory
+[2025-04-02T16:54:26.115+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-02T16:54:26.126+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-02T16:54:26.131+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=generate_analytics_report, execution_date=20250401T000000, start_date=20250402T165425, end_date=20250402T165426
+[2025-04-02T16:54:26.148+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task generate_analytics_report (Bash command failed. The command returned a non-zero exit code 2.; 684)
+[2025-04-02T16:54:26.175+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-02T16:54:26.196+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
