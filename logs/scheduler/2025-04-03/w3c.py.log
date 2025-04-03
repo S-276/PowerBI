@@ -844,3 +844,31 @@
 [2025-04-03T10:47:36.030+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:47:36.030+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-03T10:47:36.057+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:47:36.057+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
 [2025-04-03T10:47:36.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.632 seconds
+[2025-04-03T10:48:06.572+0000] {processor.py:161} INFO - Started process (PID=272) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:06.574+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:48:06.577+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:06.576+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:07.014+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:07.041+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:07.041+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:48:07.071+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:07.071+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:48:07.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.711 seconds
+[2025-04-03T10:48:37.827+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:37.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:48:37.832+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:37.831+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:38.271+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:48:38.478+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:38.478+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:48:38.506+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:38.506+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:48:38.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.713 seconds
+[2025-04-03T10:49:09.408+0000] {processor.py:161} INFO - Started process (PID=294) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:09.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:49:09.413+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:09.412+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:09.997+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:10.020+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:10.020+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:49:10.050+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:10.049+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:49:10.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.678 seconds
+[2025-04-03T10:49:40.893+0000] {processor.py:161} INFO - Started process (PID=305) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:40.894+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:49:40.896+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:40.896+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:41.296+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:49:41.487+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:41.486+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:49:41.518+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:41.517+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:49:41.543+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.653 seconds

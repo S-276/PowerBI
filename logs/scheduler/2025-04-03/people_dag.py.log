@@ -946,3 +946,31 @@
 [2025-04-03T10:47:31.293+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:47:31.293+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-03T10:47:31.321+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:47:31.320+0000] {dag.py:3823} INFO - Setting next_dagrun for People_Data_Pipeline to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
 [2025-04-03T10:47:31.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/people_dag.py took 0.163 seconds
+[2025-04-03T10:48:01.460+0000] {processor.py:161} INFO - Started process (PID=267) to work on /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:01.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/people_dag.py for tasks to queue
+[2025-04-03T10:48:01.463+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:01.463+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:01.519+0000] {processor.py:840} INFO - DAG(s) 'People_Data_Pipeline' retrieved from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:01.542+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:01.542+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:48:01.570+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:01.570+0000] {dag.py:3823} INFO - Setting next_dagrun for People_Data_Pipeline to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:48:01.594+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/people_dag.py took 0.139 seconds
+[2025-04-03T10:48:31.680+0000] {processor.py:161} INFO - Started process (PID=278) to work on /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:31.681+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/people_dag.py for tasks to queue
+[2025-04-03T10:48:31.683+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:31.683+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:31.746+0000] {processor.py:840} INFO - DAG(s) 'People_Data_Pipeline' retrieved from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:48:31.771+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:31.771+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:48:31.802+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:48:31.802+0000] {dag.py:3823} INFO - Setting next_dagrun for People_Data_Pipeline to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:48:31.834+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/people_dag.py took 0.158 seconds
+[2025-04-03T10:49:02.192+0000] {processor.py:161} INFO - Started process (PID=289) to work on /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:02.194+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/people_dag.py for tasks to queue
+[2025-04-03T10:49:02.195+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:02.195+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:02.265+0000] {processor.py:840} INFO - DAG(s) 'People_Data_Pipeline' retrieved from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:02.287+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:02.287+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:49:02.313+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:02.312+0000] {dag.py:3823} INFO - Setting next_dagrun for People_Data_Pipeline to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:49:02.340+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/people_dag.py took 0.153 seconds
+[2025-04-03T10:49:32.567+0000] {processor.py:161} INFO - Started process (PID=300) to work on /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:32.568+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/people_dag.py for tasks to queue
+[2025-04-03T10:49:32.570+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:32.570+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:32.642+0000] {processor.py:840} INFO - DAG(s) 'People_Data_Pipeline' retrieved from /opt/airflow/dags/people_dag.py
+[2025-04-03T10:49:32.666+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:32.666+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:49:32.696+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:32.696+0000] {dag.py:3823} INFO - Setting next_dagrun for People_Data_Pipeline to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:49:32.727+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/people_dag.py took 0.165 seconds
