@@ -1,0 +1,19 @@
+[2025-04-03T18:22:57.881+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T18:22:55.948003+00:00 [queued]>
+[2025-04-03T18:22:57.895+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T18:22:55.948003+00:00 [queued]>
+[2025-04-03T18:22:57.896+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T18:22:57.921+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): process_logs_to_csv> on 2025-04-03 18:22:55.948003+00:00
+[2025-04-03T18:22:57.931+0000] {standard_task_runner.py:60} INFO - Started process 2145 to run task
+[2025-04-03T18:22:57.935+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_logs_to_csv', 'manual__2025-04-03T18:22:55.948003+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpblvz1dxu']
+[2025-04-03T18:22:57.939+0000] {standard_task_runner.py:88} INFO - Job 19: Subtask process_logs_to_csv
+[2025-04-03T18:22:57.999+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T18:22:55.948003+00:00 [running]> on host 9b170102d235
+[2025-04-03T18:22:58.507+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_logs_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T18:22:55.948003+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T18:22:55.948003+00:00'
+[2025-04-03T18:22:58.510+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-03T18:22:58.512+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dags && python3 log_to_csv.py']
+[2025-04-03T18:22:58.524+0000] {subprocess.py:86} INFO - Output:
+[2025-04-03T18:33:48.374+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-04-03T18:33:48.385+0000] {process_utils.py:131} INFO - Sending 15 to group 2145. PIDs of all processes in the group: [2146, 2145]
+[2025-04-03T18:33:48.386+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 2145
+[2025-04-03T18:33:48.389+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-03T18:33:48.393+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-04-03T18:33:48.480+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2145, status='terminated', exitcode=0, started='18:22:57') (2145) terminated with exit code 0
+[2025-04-03T18:33:48.482+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2146, status='terminated', started='18:22:57') (2146) terminated with exit code None

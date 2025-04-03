@@ -1,0 +1,15 @@
+sc-status,ErrorType,ErrorID
+0,,1
+2,,2
+64,,3
+995,,4
+121,,5
+200,,6
+304,,7
+404,ClientError,8
+1236,,9
+22,,10
+206,,11
+405,ClientError,12
+302,,13
+406,ClientError,14

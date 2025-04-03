@@ -1,0 +1,21 @@
+[2025-04-03T17:46:20.802+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_star_schema manual__2025-04-03T17:46:03.570777+00:00 [queued]>
+[2025-04-03T17:46:20.815+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.generate_star_schema manual__2025-04-03T17:46:03.570777+00:00 [queued]>
+[2025-04-03T17:46:20.816+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T17:46:20.841+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): generate_star_schema> on 2025-04-03 17:46:03.570777+00:00
+[2025-04-03T17:46:20.850+0000] {standard_task_runner.py:60} INFO - Started process 1288 to run task
+[2025-04-03T17:46:20.855+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'generate_star_schema', 'manual__2025-04-03T17:46:03.570777+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpurb388if']
+[2025-04-03T17:46:20.859+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask generate_star_schema
+[2025-04-03T17:46:20.941+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.generate_star_schema manual__2025-04-03T17:46:03.570777+00:00 [running]> on host 9b170102d235
+[2025-04-03T17:46:21.305+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='generate_star_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T17:46:03.570777+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T17:46:03.570777+00:00'
+[2025-04-03T17:46:21.326+0000] {logging_mixin.py:188} INFO - Reading combined CSV from: /opt/***/data/StagingArea/CombinedLogs.csv
+[2025-04-03T17:46:22.747+0000] {logging_mixin.py:188} INFO - Loaded 154463 rows from the combined CSV.
+[2025-04-03T17:46:22.748+0000] {logging_mixin.py:188} INFO - Adding derived columns...
+[2025-04-03T17:46:23.100+0000] {logging_mixin.py:188} INFO - Applying GeoIP data...
+[2025-04-03T17:51:54.582+0000] {logging_mixin.py:188} INFO - Creating dimensions...
+[2025-04-03T17:51:54.762+0000] {logging_mixin.py:188} INFO - Creating fact table...
+[2025-04-03T17:51:55.242+0000] {logging_mixin.py:188} INFO - Saving tables...
+[2025-04-03T17:51:56.943+0000] {logging_mixin.py:188} INFO - Star Schema tables saved.
+[2025-04-03T17:51:56.976+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-03T17:51:57.011+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=generate_star_schema, execution_date=20250403T174603, start_date=20250403T174620, end_date=20250403T175157
+[2025-04-03T17:51:57.055+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-03T17:51:57.080+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

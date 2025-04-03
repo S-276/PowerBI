@@ -1,0 +1,185 @@
+[2025-04-03T19:41:00.069+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T19:40:58.739721+00:00 [queued]>
+[2025-04-03T19:41:00.081+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T19:40:58.739721+00:00 [queued]>
+[2025-04-03T19:41:00.082+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T19:41:00.098+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): process_logs_to_csv> on 2025-04-03 19:40:58.739721+00:00
+[2025-04-03T19:41:00.105+0000] {standard_task_runner.py:60} INFO - Started process 578 to run task
+[2025-04-03T19:41:00.109+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_logs_to_csv', 'manual__2025-04-03T19:40:58.739721+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpi8nn8ite']
+[2025-04-03T19:41:00.113+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask process_logs_to_csv
+[2025-04-03T19:41:00.185+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_logs_to_csv manual__2025-04-03T19:40:58.739721+00:00 [running]> on host a8bdfd477677
+[2025-04-03T19:41:00.514+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_logs_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-03T19:40:58.739721+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-03T19:40:58.739721+00:00'
+[2025-04-03T19:41:00.516+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-03T19:41:00.517+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dags && python3 log_to_csv.py']
+[2025-04-03T19:41:00.529+0000] {subprocess.py:86} INFO - Output:
+[2025-04-03T19:41:05.129+0000] {subprocess.py:93} INFO - Starting log processing...
+[2025-04-03T19:41:05.130+0000] {subprocess.py:93} INFO - Files found: 93
+[2025-04-03T19:41:05.130+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091024.log
+[2025-04-03T19:41:05.131+0000] {subprocess.py:93} INFO - u_ex091024.log: ✅ 11 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.131+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091025.log
+[2025-04-03T19:41:05.132+0000] {subprocess.py:93} INFO - u_ex091025.log: ✅ 110 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.132+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091102.log
+[2025-04-03T19:41:05.132+0000] {subprocess.py:93} INFO - u_ex091102.log: ✅ 3763 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.133+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091103.log
+[2025-04-03T19:41:05.133+0000] {subprocess.py:93} INFO - u_ex091103.log: ✅ 3672 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.133+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091106.log
+[2025-04-03T19:41:05.134+0000] {subprocess.py:93} INFO - u_ex091106.log: ✅ 282 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.134+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091120.log
+[2025-04-03T19:41:05.134+0000] {subprocess.py:93} INFO - u_ex091120.log: ✅ 967 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.135+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091123.log
+[2025-04-03T19:41:05.137+0000] {subprocess.py:93} INFO - u_ex091123.log: ✅ 1955 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.138+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091130.log
+[2025-04-03T19:41:05.139+0000] {subprocess.py:93} INFO - u_ex091130.log: ✅ 2544 valid, ❌ 1109 skipped
+[2025-04-03T19:41:05.142+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091207.log
+[2025-04-03T19:41:05.144+0000] {subprocess.py:93} INFO - u_ex091207.log: ✅ 3299 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.145+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091211.log
+[2025-04-03T19:41:05.146+0000] {subprocess.py:93} INFO - u_ex091211.log: ✅ 1054 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.147+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex091213.log
+[2025-04-03T19:41:05.147+0000] {subprocess.py:93} INFO - u_ex091213.log: ✅ 1474 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.147+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100104.log
+[2025-04-03T19:41:05.148+0000] {subprocess.py:93} INFO - u_ex100104.log: ✅ 1633 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.148+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100105.log
+[2025-04-03T19:41:05.149+0000] {subprocess.py:93} INFO - u_ex100105.log: ✅ 1599 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.152+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100106.log
+[2025-04-03T19:41:05.153+0000] {subprocess.py:93} INFO - u_ex100106.log: ✅ 3572 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.156+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100112.log
+[2025-04-03T19:41:05.159+0000] {subprocess.py:93} INFO - u_ex100112.log: ✅ 5513 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.161+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100113.log
+[2025-04-03T19:41:05.161+0000] {subprocess.py:93} INFO - u_ex100113.log: ✅ 3201 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.162+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100117.log
+[2025-04-03T19:41:05.162+0000] {subprocess.py:93} INFO - u_ex100117.log: ✅ 2725 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.163+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100131.log
+[2025-04-03T19:41:05.164+0000] {subprocess.py:93} INFO - u_ex100131.log: ✅ 1532 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.165+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100204.log
+[2025-04-03T19:41:05.166+0000] {subprocess.py:93} INFO - u_ex100204.log: ✅ 3088 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.167+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100205.log
+[2025-04-03T19:41:05.167+0000] {subprocess.py:93} INFO - u_ex100205.log: ✅ 825 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.168+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100221.log
+[2025-04-03T19:41:05.169+0000] {subprocess.py:93} INFO - u_ex100221.log: ✅ 1134 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.169+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100302.log
+[2025-04-03T19:41:05.169+0000] {subprocess.py:93} INFO - u_ex100302.log: ✅ 2910 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.170+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100304.log
+[2025-04-03T19:41:05.171+0000] {subprocess.py:93} INFO - u_ex100304.log: ✅ 1681 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.171+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100307.log
+[2025-04-03T19:41:05.172+0000] {subprocess.py:93} INFO - u_ex100307.log: ✅ 1086 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.173+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100309.log
+[2025-04-03T19:41:05.175+0000] {subprocess.py:93} INFO - u_ex100309.log: ✅ 1493 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.175+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100314.log
+[2025-04-03T19:41:05.176+0000] {subprocess.py:93} INFO - u_ex100314.log: ✅ 1813 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.176+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100315.log
+[2025-04-03T19:41:05.177+0000] {subprocess.py:93} INFO - u_ex100315.log: ✅ 3402 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.177+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100322.log
+[2025-04-03T19:41:05.178+0000] {subprocess.py:93} INFO - u_ex100322.log: ✅ 1907 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.178+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100406.log
+[2025-04-03T19:41:05.179+0000] {subprocess.py:93} INFO - u_ex100406.log: ✅ 2740 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.180+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100419.log
+[2025-04-03T19:41:05.180+0000] {subprocess.py:93} INFO - u_ex100419.log: ✅ 1865 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.181+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100422.log
+[2025-04-03T19:41:05.182+0000] {subprocess.py:93} INFO - u_ex100422.log: ✅ 1954 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.183+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100423.log
+[2025-04-03T19:41:05.184+0000] {subprocess.py:93} INFO - u_ex100423.log: ✅ 2136 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.185+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100424.log
+[2025-04-03T19:41:05.185+0000] {subprocess.py:93} INFO - u_ex100424.log: ✅ 1016 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.186+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100425.log
+[2025-04-03T19:41:05.186+0000] {subprocess.py:93} INFO - u_ex100425.log: ✅ 1732 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.187+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100430.log
+[2025-04-03T19:41:05.187+0000] {subprocess.py:93} INFO - u_ex100430.log: ✅ 1913 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.188+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100519.log
+[2025-04-03T19:41:05.191+0000] {subprocess.py:93} INFO - u_ex100519.log: ✅ 1547 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.192+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100520.log
+[2025-04-03T19:41:05.193+0000] {subprocess.py:93} INFO - u_ex100520.log: ✅ 1218 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.194+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100526.log
+[2025-04-03T19:41:05.194+0000] {subprocess.py:93} INFO - u_ex100526.log: ✅ 1460 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.195+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100528.log
+[2025-04-03T19:41:05.196+0000] {subprocess.py:93} INFO - u_ex100528.log: ✅ 1491 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.196+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100612.log
+[2025-04-03T19:41:05.197+0000] {subprocess.py:93} INFO - u_ex100612.log: ✅ 979 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.198+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100615.log
+[2025-04-03T19:41:05.198+0000] {subprocess.py:93} INFO - u_ex100615.log: ✅ 1135 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.199+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100619.log
+[2025-04-03T19:41:05.200+0000] {subprocess.py:93} INFO - u_ex100619.log: ✅ 1098 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.200+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100622.log
+[2025-04-03T19:41:05.201+0000] {subprocess.py:93} INFO - u_ex100622.log: ✅ 1583 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.201+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100626.log
+[2025-04-03T19:41:05.202+0000] {subprocess.py:93} INFO - u_ex100626.log: ✅ 964 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.202+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100628.log
+[2025-04-03T19:41:05.203+0000] {subprocess.py:93} INFO - u_ex100628.log: ✅ 1143 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.203+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100629.log
+[2025-04-03T19:41:05.204+0000] {subprocess.py:93} INFO - u_ex100629.log: ✅ 1086 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.205+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100630.log
+[2025-04-03T19:41:05.205+0000] {subprocess.py:93} INFO - u_ex100630.log: ✅ 1069 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.205+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100705.log
+[2025-04-03T19:41:05.206+0000] {subprocess.py:93} INFO - u_ex100705.log: ✅ 1087 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.206+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100708.log
+[2025-04-03T19:41:05.207+0000] {subprocess.py:93} INFO - u_ex100708.log: ✅ 1729 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.207+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100714.log
+[2025-04-03T19:41:05.208+0000] {subprocess.py:93} INFO - u_ex100714.log: ✅ 977 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.208+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100718.log
+[2025-04-03T19:41:05.209+0000] {subprocess.py:93} INFO - u_ex100718.log: ✅ 1678 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.209+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100725.log
+[2025-04-03T19:41:05.209+0000] {subprocess.py:93} INFO - u_ex100725.log: ✅ 1351 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.210+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100801.log
+[2025-04-03T19:41:05.210+0000] {subprocess.py:93} INFO - u_ex100801.log: ✅ 859 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.211+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100808.log
+[2025-04-03T19:41:05.211+0000] {subprocess.py:93} INFO - u_ex100808.log: ✅ 800 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.211+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100809.log
+[2025-04-03T19:41:05.212+0000] {subprocess.py:93} INFO - u_ex100809.log: ✅ 1920 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.212+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100830.log
+[2025-04-03T19:41:05.213+0000] {subprocess.py:93} INFO - u_ex100830.log: ✅ 897 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.213+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100906.log
+[2025-04-03T19:41:05.213+0000] {subprocess.py:93} INFO - u_ex100906.log: ✅ 831 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.214+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100912.log
+[2025-04-03T19:41:05.214+0000] {subprocess.py:93} INFO - u_ex100912.log: ✅ 1310 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.215+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100916.log
+[2025-04-03T19:41:05.215+0000] {subprocess.py:93} INFO - u_ex100916.log: ✅ 1732 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.215+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100923.log
+[2025-04-03T19:41:05.216+0000] {subprocess.py:93} INFO - u_ex100923.log: ✅ 1854 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.216+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100924.log
+[2025-04-03T19:41:05.216+0000] {subprocess.py:93} INFO - u_ex100924.log: ✅ 1218 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.217+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex100926.log
+[2025-04-03T19:41:05.217+0000] {subprocess.py:93} INFO - u_ex100926.log: ✅ 1374 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.217+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101008.log
+[2025-04-03T19:41:05.217+0000] {subprocess.py:93} INFO - u_ex101008.log: ✅ 2612 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.218+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101020.log
+[2025-04-03T19:41:05.218+0000] {subprocess.py:93} INFO - u_ex101020.log: ✅ 1205 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.218+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101023.log
+[2025-04-03T19:41:05.218+0000] {subprocess.py:93} INFO - u_ex101023.log: ✅ 2199 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.219+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101025.log
+[2025-04-03T19:41:05.219+0000] {subprocess.py:93} INFO - u_ex101025.log: ✅ 1204 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.219+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101027.log
+[2025-04-03T19:41:05.220+0000] {subprocess.py:93} INFO - u_ex101027.log: ✅ 1957 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.220+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101031.log
+[2025-04-03T19:41:05.221+0000] {subprocess.py:93} INFO - u_ex101031.log: ✅ 1092 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.221+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101101.log
+[2025-04-03T19:41:05.222+0000] {subprocess.py:93} INFO - u_ex101101.log: ✅ 2030 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.222+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101111.log
+[2025-04-03T19:41:05.222+0000] {subprocess.py:93} INFO - u_ex101111.log: ✅ 1243 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.223+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101113.log
+[2025-04-03T19:41:05.223+0000] {subprocess.py:93} INFO - u_ex101113.log: ✅ 1296 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.224+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101118.log
+[2025-04-03T19:41:05.224+0000] {subprocess.py:93} INFO - u_ex101118.log: ✅ 1255 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.224+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101126.log
+[2025-04-03T19:41:05.224+0000] {subprocess.py:93} INFO - u_ex101126.log: ✅ 1828 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.225+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101202.log
+[2025-04-03T19:41:05.225+0000] {subprocess.py:93} INFO - u_ex101202.log: ✅ 891 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.225+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101212.log
+[2025-04-03T19:41:05.225+0000] {subprocess.py:93} INFO - u_ex101212.log: ✅ 1331 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.226+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101215.log
+[2025-04-03T19:41:05.226+0000] {subprocess.py:93} INFO - u_ex101215.log: ✅ 1474 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.226+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101223.log
+[2025-04-03T19:41:05.227+0000] {subprocess.py:93} INFO - u_ex101223.log: ✅ 997 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.227+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex101225.log
+[2025-04-03T19:41:05.227+0000] {subprocess.py:93} INFO - u_ex101225.log: ✅ 812 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.228+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex110119.log
+[2025-04-03T19:41:05.228+0000] {subprocess.py:93} INFO - u_ex110119.log: ✅ 2033 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.228+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex110130.log
+[2025-04-03T19:41:05.229+0000] {subprocess.py:93} INFO - u_ex110130.log: ✅ 878 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.229+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex110205.log
+[2025-04-03T19:41:05.229+0000] {subprocess.py:93} INFO - u_ex110205.log: ✅ 763 valid, ❌ 0 skipped
+[2025-04-03T19:41:05.229+0000] {subprocess.py:93} INFO - Processing: /opt/***/data/ISSLogs/u_ex110209.log
+[2025-04-03T19:41:05.230+0000] {subprocess.py:93} INFO - u_ex110209.log: ✅ 2137 valid, ❌ 0 skipped
+[2025-04-03T19:46:12.422+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-04-03T19:46:12.426+0000] {process_utils.py:131} INFO - Sending 15 to group 578. PIDs of all processes in the group: [579, 578]
+[2025-04-03T19:46:12.427+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 578
+[2025-04-03T19:46:12.428+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-03T19:46:12.429+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-04-03T19:46:12.480+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=579, status='terminated', started='19:41:00') (579) terminated with exit code None
+[2025-04-03T19:46:12.481+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=578, status='terminated', exitcode=0, started='19:41:00') (578) terminated with exit code 0
