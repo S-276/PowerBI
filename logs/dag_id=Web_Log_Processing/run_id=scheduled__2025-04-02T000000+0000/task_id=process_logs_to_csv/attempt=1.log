@@ -1,0 +1,25 @@
+[2025-04-03T14:18:59.188+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:18:59.198+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:18:59.198+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T14:18:59.213+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): process_logs_to_csv> on 2025-04-02 00:00:00+00:00
+[2025-04-03T14:18:59.219+0000] {standard_task_runner.py:60} INFO - Started process 197 to run task
+[2025-04-03T14:18:59.223+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_logs_to_csv', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpsgy3ej_y']
+[2025-04-03T14:18:59.227+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_logs_to_csv
+[2025-04-03T14:18:59.305+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [running]> on host 2d696db5e2ea
+[2025-04-03T14:18:59.625+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_logs_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T14:18:59.628+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-03T14:18:59.630+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python d:/Documents/UK/University/BI/Repo/***-etl/log_to_csv.py']
+[2025-04-03T14:18:59.640+0000] {subprocess.py:86} INFO - Output:
+[2025-04-03T14:18:59.668+0000] {subprocess.py:93} INFO - python: can't open file 'd:/Documents/UK/University/BI/Repo/***-etl/log_to_csv.py': [Errno 2] No such file or directory
+[2025-04-03T14:18:59.671+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-03T14:18:59.683+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-03T14:18:59.687+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Web_Log_Processing, task_id=process_logs_to_csv, execution_date=20250402T000000, start_date=20250403T141859, end_date=20250403T141859
+[2025-04-03T14:18:59.727+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_logs_to_csv (Bash command failed. The command returned a non-zero exit code 2.; 197)
+[2025-04-03T14:18:59.758+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-03T14:18:59.812+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

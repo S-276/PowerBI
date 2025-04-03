@@ -85,71 +85,47 @@ def generate_insights(df: pd.DataFrame):
     traffic_patterns.to_csv(insights_dir / "TrafficPatterns.csv", index=False)
 
 def process_logs(**kwargs):
-    """Main processing function with enhanced debugging"""
+    """Main processing function to parse the combined CSV of all logs"""
     create_directories()
     
     try:
-        # Clear previous runs
-        for f in STAGE_DIR.glob('*'):
-            f.unlink()
-        
-        # Process all log files into a single DataFrame
-        combined_data = []
-        print(f"Looking for log files in: {LOG_DIR}")
-        print(f"LOG_DIR contents: {list(LOG_DIR.iterdir())}")
-        log_files = list(LOG_DIR.glob('*.log'))
-        print(f"Files found: {log_files}")
-        
-        for log_file in log_files:
-            print(f"Processing file: {log_file}")
-            with open(log_file, 'r') as infile:
-                for i, line in enumerate(infile):
-                    if line.startswith('#'):
-                        continue  # Skip comment lines
-                    parts = line.strip().split()
-                    print(f"Line {i + 1}: {line.strip()} -> Parsed parts: {parts}")
-                    if len(parts) == 14:  # Ensure the line has the expected number of fields
-                        # Replace '-' with None for missing fields
-                        parts = [None if field == '-' else field for field in parts]
-                        combined_data.append(parts)
-                    else:
-                        print(f"Skipping invalid line in {log_file}: {line.strip()}")
-        
-        # Define expected columns
-        columns = ["date", "time", "s-ip", "cs-method", "cs-uri-stem", "cs-uri-query", "s-port",
-                   "cs-username", "c-ip", "cs(User-Agent)", "sc-status", "sc-substatus", 
-                   "sc-win32-status", "time-taken"]
-        
-        # Create DataFrame
-        if combined_data:
-            df = pd.DataFrame(combined_data, columns=columns[:len(combined_data[0])])
-        else:
-            print("No valid log entries found. Creating an empty DataFrame.")
-            df = pd.DataFrame(columns=columns)
-        
-        # Add GeoIP data
-        if not df.empty:
-            geoip_data = df["c-ip"].apply(get_geoip_data)
-            df["country"] = geoip_data.apply(lambda x: x.get("country_name"))
-            df["region"] = geoip_data.apply(lambda x: x.get("region_name"))
-            df["city"] = geoip_data.apply(lambda x: x.get("city"))
-            
-            # Add derived columns for dimensions
-            df["FullDate"] = pd.to_datetime(df["date"] + " " + df["time"], errors='coerce')
-            df["FileType"] = df["cs-uri-stem"].apply(lambda x: x.split('.')[-1] if '.' in x else None)
-            df["ErrorType"] = df["sc-status"].apply(lambda x: "ClientError" if x.startswith("4") else "ServerError" if x.startswith("5") else None)
-        
-        # Save combined CSV
+        # Path to the combined CSV
         combined_csv_path = STAGE_DIR / "CombinedLogs.csv"
-        df.to_csv(combined_csv_path, index=False)
-        print(f"Combined logs saved to: {combined_csv_path}")
         
-        # If DataFrame is empty, skip further processing
+        # Check if the combined CSV exists
+        if not combined_csv_path.exists():
+            raise AirflowException(f"Combined CSV not found at {combined_csv_path}")
+        
+        # Read the combined CSV
+        print(f"Reading combined CSV from: {combined_csv_path}")
+        df = pd.read_csv(combined_csv_path)
+        print(f"Loaded {len(df)} rows from the combined CSV.")
+        
+        # Check if the DataFrame is empty
         if df.empty:
-            print("No valid data to process further. Skipping Star Schema and Insights generation.")
+            print("No valid data found in the combined CSV. Skipping further processing.")
             return
         
+        # Add GeoIP data
+        print("Adding GeoIP data...")
+        geoip_data = df["c-ip"].apply(get_geoip_data)
+        df["country"] = geoip_data.apply(lambda x: x.get("country_name"))
+        df["region"] = geoip_data.apply(lambda x: x.get("region_name"))
+        df["city"] = geoip_data.apply(lambda x: x.get("city"))
+        
+        # Add derived columns for dimensions
+        print("Adding derived columns...")
+        df["FullDate"] = pd.to_datetime(df["date"] + " " + df["time"], errors='coerce')
+        df["FileType"] = df["cs-uri-stem"].apply(lambda x: x.split('.')[-1] if '.' in x else None)
+        df["ErrorType"] = df["sc-status"].apply(lambda x: "ClientError" if x.startswith("4") else "ServerError" if x.startswith("5") else None)
+        
+        # Save updated CSV
+        updated_csv_path = STAGE_DIR / "UpdatedCombinedLogs.csv"
+        df.to_csv(updated_csv_path, index=False)
+        print(f"Updated combined logs saved to: {updated_csv_path}")
+        
         # Create Star Schema tables
+        print("Creating Star Schema tables...")
         fact_table = df[["FullDate", "c-ip", "cs-method", "cs-uri-stem", "cs-uri-query", "sc-status", 
                          "time-taken", "country", "region", "city"]]
         dim_date = df[["FullDate"]].drop_duplicates().reset_index(drop=True)
@@ -161,9 +137,12 @@ def process_logs(**kwargs):
         dim_date.to_csv(SCHEMA_DIR / "DimDate.csv", index=False)
         dim_client.to_csv(SCHEMA_DIR / "DimClient.csv", index=False)
         dim_request.to_csv(SCHEMA_DIR / "DimRequest.csv", index=False)
-
+        print("Star Schema tables saved.")
+        
         # Generate insights
+        print("Generating insights...")
         generate_insights(df)
+        print("Insights generation completed.")
         
     except Exception as e:
         raise AirflowException(f"Log processing failed: {str(e)}")
@@ -183,14 +162,16 @@ with DAG(
     max_active_runs=1,
 ) as dag:
 
-    process_task = PythonOperator(
-        task_id="process_log_files",
-        python_callable=process_logs,
+    # Task to process logs into a single CSV
+    process_logs_task = BashOperator(
+        task_id="process_logs_to_csv",
+        bash_command="python /opt/airflow/dags/log_to_csv.py",  # Updated path
     )
 
-    generate_report = BashOperator(
+    # Task to generate analytics report
+    generate_report_task = BashOperator(
         task_id="generate_analytics_report",
         bash_command=f"python {Path(__file__).parent}/analytics.py",
     )
 
-    process_task >> generate_report
+    process_logs_task >> generate_report_task
