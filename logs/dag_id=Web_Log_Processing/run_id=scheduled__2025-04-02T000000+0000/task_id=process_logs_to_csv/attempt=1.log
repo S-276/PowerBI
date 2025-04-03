@@ -23,3 +23,43 @@ airflow.exceptions.AirflowException: Bash command failed. The command returned a
 [2025-04-03T14:18:59.727+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task process_logs_to_csv (Bash command failed. The command returned a non-zero exit code 2.; 197)
 [2025-04-03T14:18:59.758+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
 [2025-04-03T14:18:59.812+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T14:30:29.017+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:30:29.038+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:30:29.045+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T14:30:29.078+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): process_logs_to_csv> on 2025-04-02 00:00:00+00:00
+[2025-04-03T14:30:29.087+0000] {standard_task_runner.py:60} INFO - Started process 192 to run task
+[2025-04-03T14:30:29.091+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_logs_to_csv', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmplocfqpoa']
+[2025-04-03T14:30:29.095+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_logs_to_csv
+[2025-04-03T14:30:29.163+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [running]> on host af883e189a6c
+[2025-04-03T14:30:29.657+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_logs_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T14:30:29.664+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-03T14:30:29.667+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/log_to_csv.py']
+[2025-04-03T14:30:29.682+0000] {subprocess.py:86} INFO - Output:
+[2025-04-03T14:30:30.461+0000] {subprocess.py:93} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T14:30:30.462+0000] {subprocess.py:93} INFO - Files found: []
+[2025-04-03T14:30:30.463+0000] {subprocess.py:93} INFO - No valid log entries found. Creating an empty DataFrame.
+[2025-04-03T14:30:30.463+0000] {subprocess.py:93} INFO - Combined logs saved to: d:/Documents/UK/University/BI/Repo/***-etl/data/StagingArea/CombinedLogs.csv
+[2025-04-03T14:30:30.562+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-03T14:30:30.599+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_logs_to_csv, execution_date=20250402T000000, start_date=20250403T143029, end_date=20250403T143030
+[2025-04-03T14:30:30.646+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-03T14:30:30.675+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T14:54:20.918+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:54:20.929+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [queued]>
+[2025-04-03T14:54:20.930+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2025-04-03T14:54:20.949+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): process_logs_to_csv> on 2025-04-02 00:00:00+00:00
+[2025-04-03T14:54:20.954+0000] {standard_task_runner.py:60} INFO - Started process 214 to run task
+[2025-04-03T14:54:20.959+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Web_Log_Processing', 'process_logs_to_csv', 'scheduled__2025-04-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/w3c.py', '--cfg-path', '/tmp/tmpoqljx8xl']
+[2025-04-03T14:54:20.962+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask process_logs_to_csv
+[2025-04-03T14:54:21.029+0000] {task_command.py:423} INFO - Running <TaskInstance: Web_Log_Processing.process_logs_to_csv scheduled__2025-04-02T00:00:00+00:00 [running]> on host 5deddec5fc9b
+[2025-04-03T14:54:21.350+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Web_Log_Processing' AIRFLOW_CTX_TASK_ID='process_logs_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-02T00:00:00+00:00'
+[2025-04-03T14:54:21.353+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-03T14:54:21.355+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/log_to_csv.py']
+[2025-04-03T14:54:21.366+0000] {subprocess.py:86} INFO - Output:
+[2025-04-03T14:54:22.162+0000] {subprocess.py:93} INFO - Looking for log files in: d:/Documents/UK/University/BI/Repo/***-etl/data
+[2025-04-03T14:54:22.162+0000] {subprocess.py:93} INFO - Files found: []
+[2025-04-03T14:54:22.163+0000] {subprocess.py:93} INFO - No valid log entries found. Creating an empty DataFrame.
+[2025-04-03T14:54:22.164+0000] {subprocess.py:93} INFO - Combined logs saved to: d:/Documents/UK/University/BI/Repo/***-etl/data/StagingArea/CombinedLogs.csv
+[2025-04-03T14:54:22.231+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-03T14:54:22.258+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Web_Log_Processing, task_id=process_logs_to_csv, execution_date=20250402T000000, start_date=20250403T145420, end_date=20250403T145422
+[2025-04-03T14:54:22.316+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-03T14:54:22.354+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

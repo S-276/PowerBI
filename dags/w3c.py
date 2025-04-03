@@ -6,12 +6,11 @@ from datetime import datetime
 from airflow import DAG
 from airflow.models import Variable
 from airflow.operators.bash import BashOperator
-from airflow.operators.python import PythonOperator
 from airflow.exceptions import AirflowException
 from functools import lru_cache  # For caching GeoIP results
 
 BASE_DIR = Path(Variable.get("data_dir", default_var="d:/Documents/UK/University/BI/Repo/airflow-etl/data"))
-LOG_DIR = BASE_DIR  # Updated to point directly to the log files directory
+LOG_DIR = Path("/opt/airflow/data/ISSLogs")
 STAGE_DIR = BASE_DIR / "StagingArea"
 SCHEMA_DIR = BASE_DIR / "StarSchema"
 GEOIP_API_URL = "https://freegeoip.app/json/"  # Replace with a faster API if needed
@@ -85,7 +84,7 @@ def generate_insights(df: pd.DataFrame):
     traffic_patterns.to_csv(insights_dir / "TrafficPatterns.csv", index=False)
 
 def process_logs(**kwargs):
-    """Main processing function to parse the combined CSV of all logs"""
+    """Main processing function to parse the combined CSV of all logs and generate dimension tables"""
     create_directories()
     
     try:
@@ -106,43 +105,35 @@ def process_logs(**kwargs):
             print("No valid data found in the combined CSV. Skipping further processing.")
             return
         
-        # Add GeoIP data
-        print("Adding GeoIP data...")
-        geoip_data = df["c-ip"].apply(get_geoip_data)
-        df["country"] = geoip_data.apply(lambda x: x.get("country_name"))
-        df["region"] = geoip_data.apply(lambda x: x.get("region_name"))
-        df["city"] = geoip_data.apply(lambda x: x.get("city"))
-        
         # Add derived columns for dimensions
         print("Adding derived columns...")
         df["FullDate"] = pd.to_datetime(df["date"] + " " + df["time"], errors='coerce')
+        df["Day"] = df["FullDate"].dt.day
+        df["Month"] = df["FullDate"].dt.month
+        df["Year"] = df["FullDate"].dt.year
         df["FileType"] = df["cs-uri-stem"].apply(lambda x: x.split('.')[-1] if '.' in x else None)
         df["ErrorType"] = df["sc-status"].apply(lambda x: "ClientError" if x.startswith("4") else "ServerError" if x.startswith("5") else None)
-        
-        # Save updated CSV
-        updated_csv_path = STAGE_DIR / "UpdatedCombinedLogs.csv"
-        df.to_csv(updated_csv_path, index=False)
-        print(f"Updated combined logs saved to: {updated_csv_path}")
         
         # Create Star Schema tables
         print("Creating Star Schema tables...")
         fact_table = df[["FullDate", "c-ip", "cs-method", "cs-uri-stem", "cs-uri-query", "sc-status", 
                          "time-taken", "country", "region", "city"]]
-        dim_date = df[["FullDate"]].drop_duplicates().reset_index(drop=True)
+        dim_date = df[["FullDate", "Day", "Month", "Year"]].drop_duplicates().reset_index(drop=True)
         dim_client = df[["c-ip", "city", "country"]].drop_duplicates().reset_index(drop=True)
         dim_request = df[["cs-uri-stem", "FileType"]].drop_duplicates().reset_index(drop=True)
+        dim_error = df[["sc-status", "ErrorType"]].drop_duplicates().reset_index(drop=True)
+        dim_referrer = df[["cs-uri-query"]].drop_duplicates().reset_index(drop=True)
+        dim_geolocation = df[["city", "region", "country"]].drop_duplicates().reset_index(drop=True)
         
         # Save tables
         fact_table.to_csv(SCHEMA_DIR / "FactTable.csv", index=False)
         dim_date.to_csv(SCHEMA_DIR / "DimDate.csv", index=False)
         dim_client.to_csv(SCHEMA_DIR / "DimClient.csv", index=False)
         dim_request.to_csv(SCHEMA_DIR / "DimRequest.csv", index=False)
+        dim_error.to_csv(SCHEMA_DIR / "DimError.csv", index=False)
+        dim_referrer.to_csv(SCHEMA_DIR / "DimReferrer.csv", index=False)
+        dim_geolocation.to_csv(SCHEMA_DIR / "DimGeolocation.csv", index=False)
         print("Star Schema tables saved.")
-        
-        # Generate insights
-        print("Generating insights...")
-        generate_insights(df)
-        print("Insights generation completed.")
         
     except Exception as e:
         raise AirflowException(f"Log processing failed: {str(e)}")
@@ -168,10 +159,4 @@ with DAG(
         bash_command="python /opt/airflow/dags/log_to_csv.py",  # Updated path
     )
 
-    # Task to generate analytics report
-    generate_report_task = BashOperator(
-        task_id="generate_analytics_report",
-        bash_command=f"python {Path(__file__).parent}/analytics.py",
-    )
-
-    process_logs_task >> generate_report_task
+    process_logs_task
