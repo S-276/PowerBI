@@ -872,3 +872,87 @@
 [2025-04-03T10:49:41.487+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:41.486+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-03T10:49:41.518+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:49:41.517+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
 [2025-04-03T10:49:41.543+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.653 seconds
+[2025-04-03T10:50:12.065+0000] {processor.py:161} INFO - Started process (PID=316) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:12.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:50:12.068+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:12.068+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:12.613+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:12.630+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:12.630+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:50:12.655+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:12.655+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:50:12.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.620 seconds
+[2025-04-03T10:50:42.949+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:42.952+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:50:42.954+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:42.953+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:43.580+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:50:43.600+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:43.600+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:50:43.627+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:50:43.627+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:50:43.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.709 seconds
+[2025-04-03T10:51:14.119+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:14.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:51:14.123+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:14.122+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:14.685+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:14.703+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:14.703+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:51:14.727+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:14.727+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:51:14.755+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.639 seconds
+[2025-04-03T10:51:44.928+0000] {processor.py:161} INFO - Started process (PID=349) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:44.930+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:51:44.932+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:44.932+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:45.516+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:51:45.535+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:45.535+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:51:45.559+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:51:45.559+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:51:45.585+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.662 seconds
+[2025-04-03T10:52:16.088+0000] {processor.py:161} INFO - Started process (PID=360) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:16.090+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:52:16.092+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:16.091+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:16.640+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:16.657+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:16.657+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:52:16.688+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:16.687+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:52:16.719+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.635 seconds
+[2025-04-03T10:52:46.918+0000] {processor.py:161} INFO - Started process (PID=371) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:46.920+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:52:46.921+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:46.921+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:47.503+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:52:47.526+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:47.526+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:52:47.553+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:52:47.552+0000] {dag.py:3823} INFO - Setting next_dagrun for Web_Log_Processing to 2025-04-02 00:00:00+00:00, run_after=2025-04-03 00:00:00+00:00
+[2025-04-03T10:52:47.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.662 seconds
+[2025-04-03T10:53:17.928+0000] {processor.py:161} INFO - Started process (PID=389) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:17.930+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:53:17.932+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:53:17.931+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:18.569+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:18.590+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:53:18.589+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:53:18.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.721 seconds
+[2025-04-03T10:53:48.852+0000] {processor.py:161} INFO - Started process (PID=400) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:48.854+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:53:48.856+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:53:48.856+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:49.485+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:53:49.503+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:53:49.503+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:53:49.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.715 seconds
+[2025-04-03T10:54:19.858+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:19.860+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:54:19.863+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:54:19.862+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:20.472+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:20.494+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:54:20.494+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:54:20.546+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.694 seconds
+[2025-04-03T10:54:51.261+0000] {processor.py:161} INFO - Started process (PID=422) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:51.264+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:54:51.267+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:54:51.266+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:51.884+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:54:51.903+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:54:51.903+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:54:51.964+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.711 seconds
+[2025-04-03T10:55:22.400+0000] {processor.py:161} INFO - Started process (PID=433) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T10:55:22.402+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T10:55:22.404+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:55:22.403+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T10:55:22.957+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T10:55:22.976+0000] {logging_mixin.py:188} INFO - [2025-04-03T10:55:22.976+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T10:55:23.036+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.640 seconds
+[2025-04-03T14:00:54.139+0000] {processor.py:161} INFO - Started process (PID=447) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T14:00:54.149+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T14:00:54.159+0000] {logging_mixin.py:188} INFO - [2025-04-03T14:00:54.159+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T14:00:55.022+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T14:00:55.052+0000] {logging_mixin.py:188} INFO - [2025-04-03T14:00:55.052+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T14:00:55.123+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.991 seconds
+[2025-04-03T14:01:25.395+0000] {processor.py:161} INFO - Started process (PID=466) to work on /opt/airflow/dags/w3c.py
+[2025-04-03T14:01:25.396+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/w3c.py for tasks to queue
+[2025-04-03T14:01:25.397+0000] {logging_mixin.py:188} INFO - [2025-04-03T14:01:25.397+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/w3c.py
+[2025-04-03T14:01:25.959+0000] {processor.py:840} INFO - DAG(s) 'Web_Log_Processing' retrieved from /opt/airflow/dags/w3c.py
+[2025-04-03T14:01:25.990+0000] {logging_mixin.py:188} INFO - [2025-04-03T14:01:25.990+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-03T14:01:26.053+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/w3c.py took 0.662 seconds
